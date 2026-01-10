@@ -100,12 +100,12 @@
 <section id="apply" class="py-20 bg-indigo-500/10">
   <div class="max-w-3xl mx-auto px-6">
     <h3 class="text-4xl font-bold text-center mb-4">Apply Now</h3>
-    <p class="text-center text-gray-300 mb-10">Your journey to leadership, recognition, and growth starts here.</p>
-    <form class="glass p-8 rounded-3xl space-y-5">
-      <input class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="Full Name" />
-      <input class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="College Name" />
-      <input class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="Email" />
-      <input class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="Phone" />
+    <p class="text-center text-gray-300 mb-10">Start your journey as an EdTech leader and shape the future of learning.</p>
+    <form id="ambassadorForm" class="glass p-8 rounded-3xl space-y-5">
+      <input name="name" required class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="Full Name" />
+      <input name="college" required class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="College Name" />
+      <input name="email" type="email" required class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="Email" />
+      <input name="phone" required class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="Phone" />
       <button class="w-full bg-indigo-500 py-3 rounded-xl hover:bg-indigo-600 transition glow">Submit Application</button>
     </form>
   </div>
@@ -115,6 +115,33 @@
 <footer class="py-10 text-center text-gray-400">
   <p>© 2026 CampusX. All rights reserved.</p>
 </footer>
+
+<script>
+// 🔗 Replace with your Google Apps Script Web App URL
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwkwt1vyMozxdTy5t-0C3Oimm-xq8SasfJwGWyJ5JGNu3qWOhtsBS_QpeUQ6uMfC90/exec";
+
+const form = document.getElementById("ambassadorForm");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => {
+    alert("Application submitted successfully! 🎉");
+    form.reset();
+  })
+  .catch(err => {
+    alert("Submission failed. Try again.");
+  });
+});
+</script>
+
 
 </body>
 </html>
