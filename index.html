@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Ambassador Program</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  <style>
+    body { background: radial-gradient(circle at top, #0f172a, #020617); }
+    .glass { backdrop-filter: blur(12px); background: rgba(255,255,255,0.08); }
+    .glow { box-shadow: 0 0 25px rgba(99,102,241,.5); }
+  </style>
+</head>
+<body class="text-white font-sans overflow-x-hidden">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full z-50 glass border-b border-white/10">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+     <h2 class="text-xl font-bold leading-tight">
+        PrepWizard<span class="text-indigo-400"> CampusX</span>
+      </h2>
+    <div class="space-x-6 hidden md:block">
+      <a href="#about" class="hover:text-indigo-400">About</a>
+      <a href="#benefits" class="hover:text-indigo-400">Benefits</a>
+      <a href="#roles" class="hover:text-indigo-400">Roles</a>
+      <a href="#apply" class="hover:text-indigo-400">Apply</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="min-h-screen flex items-center justify-center px-6 pt-24">
+  <div class="max-w-6xl grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-5xl md:text-6xl font-extrabold leading-tight">
+        Turn Your Campus Into Your <span class="text-indigo-400">Launchpad 🚀</span><br/>
+        Be a Campus Ambassador
+      </h2>
+      <p class="mt-6 text-gray-300 text-lg">
+        Join a tribe of changemakers, creators, and leaders. Represent a fast-growing brand, gain real-world exposure, and unlock career-defining opportunities while still in college.
+      </p>
+      <div class="mt-8 flex gap-4">
+        <a href="#apply" class="px-6 py-3 bg-indigo-500 rounded-xl glow hover:bg-indigo-600 transition">Apply Now</a>
+        <a href="#about" class="px-6 py-3 border border-white/20 rounded-xl hover:bg-white/10 transition">Know More</a>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="absolute -top-10 -left-10 w-72 h-72 bg-indigo-500/30 rounded-full blur-3xl"></div>
+      <div class="glass rounded-3xl p-8 relative">
+        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b" class="rounded-2xl" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-20 max-w-7xl mx-auto px-6">
+  <h3 class="text-4xl font-bold text-center mb-12">About the Program</h3>
+  <p class="text-center text-gray-300 max-w-3xl mx-auto">
+    The Campus Ambassador Program is your chance to step beyond classrooms and into the real world. You’ll work directly with industry professionals, build your personal brand, and become the face of innovation in your college.
+  </p>
+</section>
+
+<!-- Benefits -->
+<section id="benefits" class="py-20 bg-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-4xl font-bold text-center mb-12">Why Join?</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-6 rounded-2xl hover:scale-105 transition">
+        <h4 class="text-xl font-semibold text-indigo-400">Certificates</h4>
+        <p class="mt-2 text-gray-300">Get official certificates that boost your resume and LinkedIn profile.</p>
+      </div>
+      <div class="glass p-6 rounded-2xl hover:scale-105 transition">
+        <h4 class="text-xl font-semibold text-indigo-400">Internship Opportunities</h4>
+        <p class="mt-2 text-gray-300">High performers get priority access to paid internships and PPOs.</p>
+      </div>
+      <div class="glass p-6 rounded-2xl hover:scale-105 transition">
+        <h4 class="text-xl font-semibold text-indigo-400">Exclusive Swags</h4>
+        <p class="mt-2 text-gray-300">Rock premium merch, goodies, and surprise rewards made just for ambassadors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roles -->
+<section id="roles" class="py-20 max-w-7xl mx-auto px-6">
+  <h3 class="text-4xl font-bold text-center mb-12">Your Role</h3>
+  <div class="grid md:grid-cols-4 gap-6">
+    <div class="glass p-5 rounded-xl">📢 Promote events & campaigns on campus</div>
+    <div class="glass p-5 rounded-xl">🔥 Lead exciting campus activations</div>
+    <div class="glass p-5 rounded-xl">🎥 Create reels, posts & creative content</div>
+    <div class="glass p-5 rounded-xl">🤝 Build and grow student communities</div>
+  </div>
+</section>
+
+<!-- Apply -->
+<section id="apply" class="py-20 bg-indigo-500/10">
+  <div class="max-w-3xl mx-auto px-6">
+    <h3 class="text-4xl font-bold text-center mb-4">Apply Now</h3>
+    <p class="text-center text-gray-300 mb-10">Your journey to leadership, recognition, and growth starts here.</p>
+    <form class="glass p-8 rounded-3xl space-y-5">
+      <input class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="Full Name" />
+      <input class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="College Name" />
+      <input class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="Email" />
+      <input class="w-full p-3 rounded-lg bg-black/30 border border-white/10" placeholder="Phone" />
+      <button class="w-full bg-indigo-500 py-3 rounded-xl hover:bg-indigo-600 transition glow">Submit Application</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-10 text-center text-gray-400">
+  <p>© 2026 CampusX. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
